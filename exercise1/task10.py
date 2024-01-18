@@ -6,11 +6,7 @@ class Contact:
 
 class PhoneBook:
     def __init__(self):
-        self.phonebook = {
-            "Peter": Contact("Peter", "040-5466745"),
-            "Emily": Contact("Emily", "045-1212344"),
-            "John": Contact("John", "123-4567890"),
-        }
+        self.phonebook = {}
 
     def search_contacts(self):
         search_name = input("Please input the name to search by: ")
