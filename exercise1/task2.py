@@ -11,10 +11,12 @@ while len(string_list) < 10:
     string = input("Please type a word:")
     string_list.append(string)
 
+print(number_list)
+print(string_list)
+
 print("Adding random numbers to numbers list.")
 for i in range(0, 10):
     number = random.randint(1, 100)
     number_list[i] = number
 
 print(number_list)
-print(string_list)
