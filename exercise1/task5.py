@@ -14,7 +14,7 @@ def isNeg(number, negnum_list):
 def isZero():
     if len(negnum_list) > 0:
         print("Negative numbers entered:")
-        print(negnum_list)
+        print(len(negnum_list))
         print("The number of even numbers:", even_count)
     else:
         print("No negative numbers were entered.")

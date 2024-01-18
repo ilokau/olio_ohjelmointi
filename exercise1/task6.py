@@ -20,7 +20,7 @@ def isNeg(number, negnum_list):
 def isZero():
     if len(negnum_list) > 0:
         print("Negative numbers entered:")
-        print(negnum_list)
+        print(len(negnum_list))
         print("The number of even numbers:", even_count)
         print("The sum of numbers divisible by 3:", div_three_sum)
     else:
@@ -42,5 +42,5 @@ while True:
     if number % 2 == 0:
         countEven(number)
 
-    if number % 3 == 0:
+    if number > 0 and number % 3 == 0:
         countDivThreeSum(number)
