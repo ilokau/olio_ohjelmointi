@@ -1,0 +1,60 @@
+#Class definition
+
+Class AlarmClock:
+    Initialize:
+        current_time_hr: 0
+        current_time_min: 0
+        alarm_time_hr: 0
+        alarm_time_min: 0
+        alarm_status: False
+        alarm_message: ""
+
+    Method current_time_set(hour, minute):
+        current_time_hr = hour
+        current_time_min = minutes
+        return current_time_hr, current_time_min
+    
+    Method display_current_time(hour, minute):
+        print("Current time: ", current_time_hr, current_time_min)
+
+    Method alarm_set(hour, minute):
+        alarm_time_hr = hour
+        alarm_time_min = minutes
+        return alarm_time_hr, alarm_time_min
+    
+    Method alarm_message_set(message):
+        alarm_message = message
+        return alarm_message
+    
+    Method turn_alarm_on:
+        alarm_status = True
+    
+    Method turn_alarm_off:
+        alarm_status = False
+
+    Method time_passing(current_time_hr, current_time_min):
+        current_time_min += 1
+
+        if current_time_min == 60:
+            current_time_min == 0
+            current_time_hr += 1
+
+#Alarm usage
+    
+    alarm_clock = AlarmClock()
+
+    alarm_clock.current_time_set(22,0)
+
+    alarm_clock.alarm_set(07,0)
+
+    alarm_clock.turn_alarm_on()
+
+
+    while True:
+        alarm_clock.display_current_time()
+
+        if alarm_clock.current_time_hr == alarm_clock.alarm_time_hr and alarm_clock.current_time_min == alarm_clock.alarm_time_min and alarm_clock.alarm_status is True:
+            print("Alarm!", alarm_clock.alarm_message)
+            alarm_clock.turn_alarm_off()
+
+    
