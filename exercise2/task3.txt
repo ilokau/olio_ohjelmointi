@@ -38,6 +38,12 @@ Class AlarmClock:
         if current_time_min == 60:
             current_time_min == 0
             current_time_hr += 1
+    
+    Method check_if_alarm()
+        if current_time_hr = alarm_time_hr and current_time_min equals alarm_time_min and alarm_status is True
+            display "Alarm! {alarm_message}"
+            turn_alarm_off(alarm_status = False)
+    
 
 #Alarm usage
     
@@ -54,7 +60,7 @@ Class AlarmClock:
         alarm_clock.display_current_time()
 
         if alarm_clock.current_time_hr == alarm_clock.alarm_time_hr and alarm_clock.current_time_min == alarm_clock.alarm_time_min and alarm_clock.alarm_status is True:
-            print("Alarm!", alarm_clock.alarm_message)
+            print ("Alarm!", alarm_clock.alarm_message)
             alarm_clock.turn_alarm_off()
 
     
