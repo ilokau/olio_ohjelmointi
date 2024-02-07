@@ -5,10 +5,17 @@ class NumberStats:
         self.numbers = []
         self.count = 0
         self.sum = 0
+        self.psum = 0
+        self.nsum = 0
 
     # Parts 1 and 2 functions
     def add_number(self, number: int):
         self.sum += number
+        if number > 0:
+            self.psum += number
+        elif number < 0:
+            self.nsum += number
+
         self.count += 1
         self.numbers.append(number)
         return self.numbers
@@ -19,6 +26,12 @@ class NumberStats:
 
     def get_sum(self):
         return self.sum
+
+    def get_psum(self):
+        return self.psum
+
+    def get_nsum(self):
+        return self.nsum
 
     def avg(self):
         if self.count == 0:
@@ -57,3 +70,5 @@ while True:
 print("Numbers added:", stats.count_numbers())
 print("Sum of numbers:", stats.get_sum())
 print("Mean of numbers:", stats.avg())
+print("Sum of positive numbers:", stats.get_psum())
+print("Sum of negative numbers:", stats.get_nsum())
