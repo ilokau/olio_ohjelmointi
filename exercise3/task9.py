@@ -1,0 +1,3 @@
+
+class WeatherStation:
+    pass
