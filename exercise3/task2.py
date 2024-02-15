@@ -1,7 +1,5 @@
 class NumberStats:
     def __init__(self):
-        # no need to add any new varibales here, just change the
-        # initialization of the self.numbers variable.
         self.numbers = []
         self.count = 0
         self.sum = 0
