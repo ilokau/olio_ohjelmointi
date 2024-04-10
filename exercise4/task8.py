@@ -2,9 +2,14 @@
 class Task:
     _id = 1 # joku mättää tässä class variablessa???
     
+    # class metodina __init__:n ulkopuolelle
+    @classmethod
+    def uusi_id(cls):
+        Task._id += 1
+        return Task._id
+    
     def __init__(self, description: str, programmer: str, workload: int):
-        self._id = Task._id # chättis ehdotti tätä, mut ei toimi
-        Task._id += 1 # chättis ehdotti tätä, mut ei toimi
+        self.id = Task.uusi_id() 
         self._description = description
         self._programmer = programmer
         self._workload = int(workload)
@@ -35,7 +40,7 @@ class OrderBook:
     
     def mark_finished(self, id: int):
         for task in self._orders:
-            if task._id == id:
+            if task.id == id:
                 task.mark_finished()
                 break
         else:
